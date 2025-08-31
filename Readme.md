@@ -485,3 +485,95 @@ This document describes the step-by-step exploratory analysis performed on the C
 - Budget distribution skewed low; high-value deals are rare outliers.  
 
 
+ # 📊 Exploratory Data Analysis (EDA) Report
+
+---
+
+## 1️⃣ Setup & Environment
+- Mounted Google Drive to access project files.  
+- Imported required libraries: `pandas`, `numpy`, `sqlite3`, `matplotlib`, `seaborn`.  
+- Verified environment readiness.  
+
+✅ **Output:** Environment successfully set up, Drive mounted, libraries loaded.
+
+---
+
+## 2️⃣ Data Import
+- Extracted datasets from **SQLite database** (`CRM_Capstone_DB.sqlite`).  
+- Loaded key tables:  
+  - **Leads**  
+  - **Companies**  
+  - **Regions**  
+  - **Reps**  
+
+✅ **Output:** DataFrames successfully created, with correct schema and row counts.
+
+---
+
+## 3️⃣ Dataset Overview
+- **Leads Table:** Contains lead details (ID, company, source, budget, funnel stage, outcome).  
+- **Companies Table:** Company attributes (industry, size, ownership, location).  
+- **Regions Table:** Region metadata (region ID, name, timezone, head).  
+- **Reps Table:** Sales rep info (ID, name, region, deals closed, win rate).  
+
+✅ **Output:** No critical missing values; datatypes consistent.
+
+---
+
+## 4️⃣ Lead Data Exploration
+### 📊 Lead Outcomes
+- **Action:** Counted leads by outcome (Deal Won, Deal Lost, Ongoing).  
+- **Result:** Majority of leads were **Lost**, followed by Ongoing; **Won** was smallest.  
+
+### 🌍 Regional Distribution
+- **Action:** Counted leads grouped by region.  
+- **Result:**  
+  - **North America & Europe** → highest volume.  
+  - **Africa & Middle East** → lowest.  
+
+### 📈 Lead Sources
+- **Action:** Analyzed acquisition channels.  
+- **Result:**  
+  - Digital ads (Instagram, LinkedIn) contributed the most.  
+  - Referrals, cold calling, and trade shows smaller contributors.  
+
+---
+
+## 5️⃣ Funnel Stage Exploration
+- **Action:** Defined funnel: **Lead → Contacted → Demo → Proposal → Deal/Lost**.  
+- **Result:**  
+  - Largest drop-off occurred between **Demo → Proposal**.  
+  - Funnel imbalance confirmed with bar visualization.  
+
+---
+
+## 6️⃣ Sales Rep Analysis
+- **Action:** Compared reps by deals closed & win rates.  
+- **Result:**  
+  - A few top performers achieved **>70% win rates**.  
+  - Many reps had **<20% win rates** and very few closed deals.  
+
+---
+
+## 7️⃣ Company Insights
+- **Industry Distribution:** Retail, Software, Healthcare dominated. Finance & Manufacturing underrepresented.  
+- **Budget Distribution:** Skewed towards **smaller budgets**; few high-value deals observed (outliers).  
+
+---
+
+## 🔑 Key Insights
+1. **Funnel Weakness:** Major attrition occurs at **Demo → Proposal** stage.  
+2. **Rep Performance:** Wide disparities; top reps carry most successes.  
+3. **Regional Trends:** North America drives **volume**, APAC drives **efficiency**.  
+4. **Lead Sources:** Heavily reliant on **digital ads**; offline sources limited.  
+5. **Budgets:** Concentrated in low-to-mid ranges; high-value deals rare.  
+
+---
+
+✨ This concludes the **EDA Report**.  
+
+## Automation Notebook Results
+
+- The automaton file  contains data that will be sent to the stakeholders.
+- It will generate a report about past month and quarter sales.
+
