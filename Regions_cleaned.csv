@@ -1,0 +1,7 @@
+Region_ID,Region_Name,Region_Head,Timezone
+NA,Region_NA,Alice Smith,GMT
+EU,Region_EU,Hannah Black,PST
+APAC,Region_APAC,Jill Lewis,IST
+ME,Region_ME,Oscar Clark,CET
+LA,Region_LA,Rachel Allen,GMT
+AF,Region_AF,Steve Wright,PST
